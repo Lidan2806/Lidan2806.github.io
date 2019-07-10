@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Perpangkatan dan Bentuk Akar</title>
+  <meta name="description" content="My first PWA"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/materialize.min.css">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#00897B"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+    </script>
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body>
+
+  <!-- Navigasi -->
+  <nav class="teal lighten-1" role="navigation">
+    <div class="nav-wrapper container">
+        <a href="../pages/daftarmateri.html" class="sidenav-trigger" data-target="nav-mobile">
+            <i class="material-icons">arrow_back</i>
+        </a> 
+        <a href="/" class="flow-text">Bilangan Berpangkat</a>
+        <span class="btn-flat right grey-text text-darken-1">
+            <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
+        </span>
+    </div>
+  </nav>
+
+  <!-- side nav -->
+  <ul id="side-menu" class="sidenav side-menu">
+      <li><a class="subheader">Bilangan Berpangkat</a></li>
+      <li><a href="/" class="waves-effect">Beranda</a></li>
+      <li><a href="/pages/daftarmateri.html" class="waves-effect">Materi</a></li>
+      <li><a href="/pages/petunjuk.html" class="waves-effect">Petunjuk</a></li>
+      <li><a href="/pages/tujuan.html" class="waves-effect">Tujuan Pembelaran</a></li>
+      <li><a href="/pages/tentang.html" class="waves-effect">Tentang</a></li>
+      
+    </ul>
+  <!-- Akhir Navigasi -->
+
+    <div class="body-content container">
+        <h5>1. Memahami Konsep Bilangan</h5>
+            <p>Perpangkatan adalah perkalian berulang dari suatu bilangan yang sama. Bilangan pokok dalam suatu perpangkatan disebut basis/bilangan pokok dan banyaknya bilangan pokok yang digunakan dalam perkalian berulang disebut pangkat/eksponen. Notasi pangkat digunakan untuk menuliskan hasil kali suatu bilangan berulang dalam bentuk yang lebih sederhana. Seperti misalnya, kita memiliki tiga faktor a yang sama, sehingga dapat menggunakan lambang a3 untuk menyatakan (a x a x a), dengan 3 dituliskan di sebelah kanan atas a yang dinamakan pangkat dari a dan menyatakan banyaknya faktor a yang terulang, dapat ditulis a3 = a x a x a. Sehingga dapat didefinisikan menjadi: </p>
+        <!--<div class="card-panel center teal lighten-2 white-text">
+            $a^n = a \times a\times a ... \times a$</div>-->
+        <div class="card-panel center teal lighten-2 white-text">
+            $a^n = \mathop{\underset{\mmlToken{mo}{⎵}}{a \times a\times a ... \times a}}\limits_{\text{a sebanyak n}}$</div>
+        <blockquote><p>Keterangan :</p>
+            <p>$ a $= bilangan pokok/basis.</p>
+            <p>$ n $= pangkat/eksponen.</p>
+        </blockquote>
+            
+        <br>
+        <p class="card-panel teal lighten-2 white-text">Amati tabel berikut ini :</p>
+        <table class="highlight centered">
+            <thead>
+                <tr>
+                    <th>Perpangkatan</th>
+                    <th>Bentuk Perkalian</th>
+                    <th>Hasil Perkalian</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                <td>$5^1$</td>
+                <td>$5$</td>
+                <td>$5$</td>
+                </tr>
+                <tr>
+                <td>$5^2$</td>
+                <td>$5 \times 5$</td>
+                <td>$25$</td>
+                </tr>
+                <tr>
+                <td>$5^3$</td>
+                <td>$5 \times 5 \times 5$</td>
+                <td>$125$</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+         <br>
+         <hr>
+
+         
+        <p class="card-panel teal lighten-2 white-text">Lengkapilah contoh berikut ini.</p>
+          <table>
+                
+            <tbody>
+                <tr style="border:0;">
+                    <td style="width:40px">1. $2^3$</td>
+                    <td style="width:180px">$= 2 \times 2 \times 2$</td>
+                </tr>
+                <tr style="border:0;">
+                    <td style="width:40px"></td>
+                    <td>$ = $<input id="a11" placeholder="....." style="width:20px;"></td>
+                    <td id="ca"></td>
+                </tr>
+                <tr style="border:0;">
+                    <td style="width:40px">2. $3^2$</td>
+                    <td>$= $<input id="b1" placeholder="....." style="width:15px;">$ \times $<input id="b2" placeholder="....." style="width:15px;"></td>
+                    <td id="cb"></td>
+                </tr>
+                <tr style="border:0;">
+                    <td style="width:40px"></td>
+                    <td>$ = $<input id="b11" placeholder="....." style="width:20px;"></td>
+                    <td id="cb2"></td>
+                </tr>
+                <tr style="border:0;">
+                    <td style="width:40px">3. $2^5$</td>
+                    <td>$= $<input id="c1" placeholder="....." style="width:15px;">$ \times $<input id="c2" placeholder="....." style="width:15px;">$ \times $<input id="c3" placeholder="....." style="width:15px;">$ \times $<input id="c4" placeholder="....." style="width:15px;">$ \times $<input id="c5" placeholder="....." style="width:15px;"></td>
+                    <td id="cc"></td>
+                </tr>
+                <tr style="border:0;">
+                    <td style="width:40px"></td>
+                    <td>$ = $<input id="c11" placeholder="....." style="width:20px;"></td>
+                    <td id="cc2"></td>
+                </tr>
+                <tr style="border:0;">
+                    <td style="width:40px">4. $3^3$</td>
+                    <td>$= $<input id="d1" placeholder="....." style="width:15px;">$ \times $<input id="d2" placeholder="....." style="width:15px;">$ \times $<input id="d3" placeholder="....." style="width:15px;"></td>
+                    <td id="cd"></td>
+                </tr>
+                <tr style="border:0;">
+                    <td style="width:40px"></td>
+                    <td>$ = $<input id="d11" placeholder="....." style="width:20px;"></td>
+                    <td id="cd2"></td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn right" id="p1" onclick="periksa1()">Periksa</button>
+        <br>
+        <br>
+        <hr>
+        <br>
+
+
+
+
+
+        <!--<p class="card-panel teal lighten-2 white-text">Lengkapilah tabel berikut ini.</p>
+        <table class="highlight centered">
+                <thead>
+                    <tr>
+                        <th>Perpangkatan</th>
+                        <th>Bentuk Perkalian</th>
+                        <th>Hasil Perkalian</th>
+                        <th>Ket.</th>
+                    </tr>
+                </thead>
+    
+                <tbody>
+                    <tr>
+                        <td>$2^3$</td>
+                        <td><input id="a" placeholder="..." style="width:10px;"> x <input id="a" placeholder="..." style="width:10px;"> x <input id="a" placeholder="..." style="width:10px;"></td>
+                        <td><input id="a1" placeholder="......" style="width:30px;" class="center-align"></td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>$3^2$</td>
+                        <td><input id="b" placeholder="..." style="width:10px;"> x <input id="b" placeholder="..." style="width:10px;"></td>
+                        <td><input id="b1" placeholder="......" style="width:30px;" class="center-align"></td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>$4^2$</td>
+                        <td><input id="c" placeholder="..." style="width:10px;"> x <input id="c" placeholder="..." style="width:10px;"></td>
+                        <td><input id="c1" placeholder="......" style="width:30px;" class="center-align"></td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>$2^5$</td>
+                        <td><input id="a" placeholder="..." style="width:10px;"> x <input id="a" placeholder="..." style="width:10px;"> x <input id="a" placeholder="..." style="width:10px;"> x <input id="a" placeholder="..." style="width:10px;"> x <input id="a" placeholder="..." style="width:10px;"></td>
+                        <td><input id="d1" placeholder="......" style="width:30px;" class="center-align"></td>
+                        <td> </td>
+                    </tr>
+                    <tr>
+                        <td>$3^3$</td>
+                        <td><input id="b" placeholder="..." style="width:10px;"> x <input id="b" placeholder="..." style="width:10px;"> x <input id="b" placeholder="..." style="width:10px;"></td>
+                        <td><input id="e1" placeholder="......" style="width:30px;" class="center-align"></td>
+                        <td> </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="btn right">Periksa</button>
+            <br>
+            <br>
+            <hr>
+            <br>-->
+
+           <!--<p class="card-panel teal lighten-2 white-text">Lengkapilah tabel berikut ini.</p>
+            <table class="highlight centered">
+                    <thead>
+                        <tr>
+                            <th>Bentuk Perkalian</th>
+                            <th>Perpangkatan</th>
+                            <th>Hasil Perkalian</th>
+                            <th>Ket.</th>
+                        </tr>
+                    </thead>
+        
+                    <tbody>
+                        <tr>
+                            <td>2 x 2 x 2 x 2</td>
+                            <td>
+                                <p>$2^a$</p>
+                                <p>a = <input id="aa1" placeholder="a" style="width:10px;"></p>
+                            </td>
+                            <td><input id="aa1" placeholder="......" style="width:30px;" class="center-align"></td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td>3 x 3 x 3 x 3</td>
+                            <td>
+                                <p>$3^a$</p>
+                                <p>a = <input id="aa2" placeholder="a" style="width:10px;"></p>
+                            </td>
+                            <td><input id="aa2" placeholder="......" style="width:30px;" class="center-align"></td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td>7 x 7</td>
+                            <td>
+                                <p>$7^a$</p>
+                                <p>a = <input id="aa3" placeholder="a" style="width:10px;"></p>
+                            </td>
+                            <td><input id="aa3" placeholder="......" style="width:30px;" class="center-align"></td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>
+                                <p>$9^a$</p>
+                                <p>a = <input id="aa4" placeholder="a" style="width:10px;"></p>
+                            </td>
+                            <td><input id="aa4" placeholder="......" style="width:30px;" class="center-align"></td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td>1 x 1 x 1 x 1</td>
+                            <td>
+                                <p>$1^a$</p>
+                                <p>a = <input id="aa5" placeholder="a" style="width:10px;"></p>
+                            </td>
+                            <td><input id="aa5" placeholder="......" style="width:30px;" class="center-align"></td>
+                            <td> </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn right">Periksa</button>-->
+                
+                
+                <div style="padding:70px 0;">
+                    <a class="btn left" href="../pages/daftarmateri.html">Kembali</a>
+                    <a class="btn right" href="./contoh1.html">Selanjutnya</a>
+                 </div>
+    </div>
+
+  </div>
+
+  <script src="../js/materialize.min.js"></script>
+  <script src="../js/nav.js"></script>
+  <!--<script src="js/script.js"></script>
+  <script src="js/api.js"></script>-->
+  <script>
+  // REGISTER SERVICE WORKER
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/service-worker.js')
+      .then(function() {
+        console.log('Pendaftaran ServiceWorker berhasil');
+      })
+      .catch(function(){
+        console.log('Pendaftaran ServiceWorker gagal');
+      });
+    })
+  } else {
+    console.log("ServiceWorker belum didukung browser ini.")
+  }
+
+
+  
+  //document.addEventListener("DOMContentLoaded", function() {
+      //  getArticles();
+    //});
+
+  </script>
+
+
+
+<script>
+    function periksa1(){
+        var a111 = document.getElementById("a11").value;
+            if (a111 == 8){
+                document.getElementById("ca").innerHTML = "betul";
+            }
+            else{
+                document.getElementById("ca").innerHTML = "salah";
+            }
+
+
+        var b1 = document.getElementById("b1").value;
+        var b2 = document.getElementById("b2").value;
+            if (b1 == 3 && b2 == 3){
+                document.getElementById("cb").innerHTML = "betul";
+            }
+            else{
+                document.getElementById("cb").innerHTML = "salah";
+            }
+
+            
+        var b11 = document.getElementById("b11").value;
+            if (b11 == 9){
+                document.getElementById("cb2").innerHTML = "betul";
+            }
+            else{
+                document.getElementById("cb2").innerHTML = "salah";
+            }
+
+
+        var c1 = document.getElementById("c1").value;
+        var c2 = document.getElementById("c2").value;
+        var c3 = document.getElementById("c3").value;
+        var c4 = document.getElementById("c4").value;
+        var c5 = document.getElementById("c5").value;
+            if (c1 == 2 && c2 == 2 && c3 == 2 && c4 == 2 && c5 == 2){
+                document.getElementById("cc").innerHTML = "betul";
+            }
+            else{
+                document.getElementById("cc").innerHTML = "salah";
+            }
+
+         
+        var c11 = document.getElementById("c11").value;
+            if (c11 == 32){
+                document.getElementById("cc2").innerHTML = "betul";
+            }
+            else{
+                document.getElementById("cc2").innerHTML = "salah";
+            }
+
+         
+        var d1 = document.getElementById("d1").value;
+        var d2 = document.getElementById("d2").value;
+        var d3 = document.getElementById("d3").value;
+            if (d1 == 3 && d2 == 3 && d3 == 3){
+                document.getElementById("cd").innerHTML = "betul";
+            }
+            else{
+                document.getElementById("cd").innerHTML = "salah";
+            }
+
+         
+        var d11 = document.getElementById("d11").value;
+            if (d11 == 27){
+                document.getElementById("cd2").innerHTML = "betul";
+            }
+            else{
+                document.getElementById("cd2").innerHTML = "salah";
+            }
+
+         
+
+    }
+</script>
+</body>
+</html>

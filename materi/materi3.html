@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Perpangkatan dan Bentuk Akar</title>
+  <meta name="description" content="My first PWA"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/materialize.min.css">
+  <link rel="manifest" href="../manifest.json">
+  <meta name="theme-color" content="#00897B"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigasi -->
+  <nav class="teal lighten-1" role="navigation">
+    <div class="nav-wrapper container">
+        <a href="../pages/daftarmateri.html" class="sidenav-trigger" data-target="nav-mobile">
+            <i class="material-icons">arrow_back</i>
+        </a> 
+        <a href="/" class="">Pembagian pada Perpangkatan</a>
+        <span class="btn-flat right grey-text text-darken-1">
+            <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
+        </span>
+    </div>
+  </nav>
+
+  <!-- side nav -->
+  <ul id="side-menu" class="sidenav side-menu">
+      <li><a class="subheader">Pembagian pada Perpangkatan</a></li>
+      <li><a href="/" class="waves-effect">Beranda</a></li>
+      <li><a href="/pages/daftarmateri.html" class="waves-effect">Materi</a></li>
+      <li><a href="/pages/petunjuk.html" class="waves-effect">Petunjuk</a></li>
+      <li><a href="/pages/tujuan.html" class="waves-effect">Tujuan Pembelaran</a></li>
+      <li><a href="/pages/tentang.html" class="waves-effect">Tentang</a></li>
+      
+    </ul>
+  <!-- Akhir Navigasi -->
+
+    <div class="body-content container">
+        <h5>1. Membagi Dua Bentuk Perpangkatan</h5>
+            <p>
+                    Untuk mengetahui sifat pembagian dua bentuk perpangkatan, simaklah terlebih dahulu operasi hitung berikut ini:
+            </p>
+        <br>
+        <table class="highlight centered">
+            <thead>
+                <tr>
+                    <th>Pembagian Bentuk Perpangkatan</th>
+                    <th>Operasi Perkalian</th>
+                    <th>Perpangkatan</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                <td>3<sup>4</sup> / 3<sup>2</sup></td>
+                <td>(3 x 3 x 3 x 3) / (3 x 3)</td>
+                <td>3<sup>4-2</sup> = 3<sup>2</sup></td>
+                </tr>
+                <tr>
+                <td>(-2)<sup>3</sup> / (-2)<sup>2</sup></td>
+                <td>((-2) x (-2) x (-2)) / ((-2) x (-2))</td>
+                <td>(-2)<sup>3-2</sup> = (-2)<sup>1</sup></td>
+                </tr>
+                <tr>
+                <td>6<sup>2</sup> / 6<sup>3</sup></td>
+                <td>(6 x 6) / (6 x 6 x 6)</td>
+                <td>6<sup>2-3</sup> = 6<sup>-1</sup></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <p class="card-panel teal lighten-2 white-text">Lengkapilah tabel berikut ini.</p>
+        <table class="highlight centered">
+                <thead>
+                    <tr>
+                        <th>Pembagian bentuk Perpangkatan</th>
+                        <th>Perpangkatan</th>
+                        <th>Ket.</th>
+                    </tr>
+                </thead>
+    
+                <tbody>
+                    <tr>
+                        <td>9<sup>4</sup> / 9<sup>2</sup></td>
+                        <td>
+                            <p>9<sup>a-b</sup>= 9<sup>c</sup></p>
+                            <blockquote>
+                            <p>a = <input id="a" placeholder="a" style="width:10px;">, b = <input id="b" placeholder="b" style="width:10px;">, c = <input id="c" placeholder="c" style="width:10px;"></p>
+                            </blockquote>
+                        </td>
+                        <td id="ca"> </td>
+                    </tr>
+                    <tr>
+                        <td>12<sup>2</sup> / 12<sup>5</sup></td>
+                        <td>
+                            <p>12<sup>a-b</sup>= 12<sup>c</sup></p>
+                            <blockquote>
+                            <p>a = <input id="a1" placeholder="a" style="width:10px;">, b = <input id="b1" placeholder="b" style="width:10px;">, c = <input id="c1" placeholder="c" style="width:10px;"></p> 
+                            </blockquote>
+                            </td>
+                        <td id="ca1"> </td>
+                    </tr>
+                    <tr>
+                        <td>(c) x (c x c x c x c)</td>
+                        <td>
+                            <p>c<sup>a</sup> x c<sup>b</sup></p>
+                            <blockquote>
+                            <p>a = <input id="a2" placeholder="a" style="width:10px;">, b = <input id="b2" placeholder="b" style="width:10px;">, c = <input id="c2" placeholder="c" style="width:10px;"></p>
+                            </blockquote>
+                        </td>
+                        <td id="ca2"> </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <button id="periksa1" class="btn right">Periksa</button>
+            <br>
+            <br>
+            <hr>
+            <br>
+
+            
+         <div class="row">
+                <p class="card-panel">Secara umum, pembagian dua bentuk perpangkatan memiliki sifat berikut ini :</p>
+            
+            <p class="card-panel teal lighten-2 white-text center"> rumus </p>
+                 
+        </div>
+        <hr>
+
+
+
+        <div style="padding:70px 0;">
+            <a class="btn left" href="../pages/daftarmateri.html">Kembali</a>
+            <a class="btn right" href="./contoh3.html">Selanjutnya</a>
+            </div>
+            
+    </div>
+
+  </div>
+
+  <script src="../js/materialize.min.js"></script>
+  <script src="../js/nav.js"></script>
+  <!--<script src="js/script.js"></script>
+  <script src="js/api.js"></script>-->
+  <script>
+  // REGISTER SERVICE WORKER
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/service-worker.js')
+      .then(function() {
+        console.log('Pendaftaran ServiceWorker berhasil');
+      })
+      .catch(function(){
+        console.log('Pendaftaran ServiceWorker gagal');
+      });
+    })
+  } else {
+    console.log("ServiceWorker belum didukung browser ini.")
+  }
+
+
+  
+  //document.addEventListener("DOMContentLoaded", function() {
+      //  getArticles();
+    //});
+
+  </script>
+</body>
+</html>
